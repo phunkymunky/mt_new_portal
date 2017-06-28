@@ -1,0 +1,101 @@
+@charset "UTF-8";
+#cssmenu > ul, #hwdb > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  /*line-height: 1;*/
+}
+#cssmenu > ul{
+  display: block;
+  position: relative;
+  width: 100%;
+
+}
+#cssmenu > ul li{
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#cssmenu > ul li a{
+  /* Layout */
+  display: block;
+  position: relative;
+  margin: 0;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 8px 20px;
+  /*font-family: Helvetica, Arial, sans-serif;*/
+  color: #5599a7;
+  text-decoration: none;
+  /*font-size: 1em;*/
+  background: #f0f0f0;
+}
+/* Rounded corners for the first link of the menu/submenus */
+#cssmenu > ul li:first-child > a {  border-top: 0;}
+/* Rounded corners for the last link of the menu/submenus */
+#cssmenu > ul li:last-child > a, #hwdb > ul li:last-child > a {  border-bottom: 0;}
+/* The hover state of the menu/submenu links */
+#cssmenu > ul li a:hover,#cssmenu > ul li:hover > a, #cssmenu > ul li:hover > a {  color: #ffffff;  background: #ff8936;}
+/* The arrow indicating a submenu */
+#cssmenu > ul .has-sub > a::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  width: 0px;
+  height: 0px;
+  border: 4px solid transparent;
+  border-left: 4px solid #5599a7;
+}
+/* The same arrow, but with a darker color, to create the shadow effect */
+#cssmenu > ul .has-sub > a::before{
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  width: 0px;
+  height: 0px;
+  border: 4px solid transparent;
+  border-left: 4px solid #fff;
+}
+/* Changing the color of the arrow on hover */
+#cssmenu > ul li > a:hover::after,#cssmenu > ul li:hover > a::after {  border-left: 4px solid #fff;}
+#cssmenu > ul li > a:hover::before,#cssmenu > ul li:hover > a::before { border-left: 4px solid rgba(0, 0, 0, 0.25);}
+/* THE SUBMENUS */
+#cssmenu > ul ul {
+  position: absolute;
+  z-index:1100;
+  left: 100%;
+  top: -9999px;
+  padding-left: 0px;
+  opacity: 0;
+  width: 250px;
+  border-left: 1px solid white;
+  border-right: 3 px solid white;
+/*  -webkit-transition: opacity 0.3s ease-in;
+  -moz-transition: opacity 0.3s ease- in;
+  transition: opacity 0.3s ease-in;
+*/
+  }
+#cssmenu > ul ul li a { font-size: 1em; color: white;background: #dbdbdb;border-top: 1px solid white; border-bottom: 1px solid #b0b0b0; }
+/* Showing the submenu when the user is hovering the parent link */
+#cssmenu > ul li:hover > ul { top: 0px;  opacity: 1;  z-index: 1;}
+/*#cssmenu ul span {font-size: 1.5em; }*/
+#cssmenu ul a:hover {color: white !important; }
+#cssmenu ul ul span {font-size: 1.5em }
+
+/*@media screen and (max-width: 1023px) {*/
+/*@media screen and (max-width: 767px) {*/
+/*	#cssmenu > ul {
+		width: 50%;
+		max-width: 225px;
+	}
+}
+*/
+.first {border-top: 1px solid #e8e8e8;}
+.first-sub {border-top: 1px solid white;}
+.last {border-bottom: 1px solid #d9d9d9;}
+.last-sub {border-bottom: 1px solid #b0b0b0;}

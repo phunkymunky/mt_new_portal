@@ -1,0 +1,38 @@
+@charset "UTF-8";
+#accordionmenu {width: 100%;}
+.ui-accordion-header {margin:0;}
+#accordionmenu > h3 {
+    margin:0;
+    color: #5599a7;
+    font-size: 1.2em; 
+    display: block; 
+    padding: 10px; 
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #d9d9d9;
+}
+#accordionmenu > h3:hover{color: #ffffff;  background: #ff8936;}
+.submenu ul {background: white;margin:0; padding: 0px;vertical-align: baseline;}
+.submenu ul li {
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #d9d9d9; 
+    border-left: 1px solid #d9d9d9; 
+    border-right: 1px solid #fafafa;
+    list-style-type: none;
+    padding-left: 30px;
+    line-height: 2.5em;
+}
+.submenu ul li:hover {background: #ff8936;}
+.submenu ul li span {display: block;}
+.submenu ul li a {font-size: 1em;text-decoration: none;display: block;color: #5599a7;}
+.submenu ul li a:hover {color: white;}
+.first {border-top: 1px solid #e8e8e8;}
+.first-sub {border-top: 1px solid white;}
+.last {border-bottom: 1px solid #d9d9d9;}
+.last-sub {border-bottom: 1px solid #b0b0b0;}
+
+/*accordion overrides*/
+.ui-accordion .ui-accordion-content {
+    padding: 0 !important;  
+}
+#accordionmenu > .ui-state-active {background:#d9d9d9 !important;color: f0f0f0;}
+.ui-corner-all {border-radius: 0;}
